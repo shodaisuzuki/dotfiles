@@ -1,0 +1,36 @@
+# チートシート
+# https://qiita.com/kitaro_tn/items/abb881c098b3df3f9871
+# https://qiita.com/Yinaura/items/9928e32fa9fc9092f24c
+
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  # Include:
+  #   - '**/Rakefile'
+  #   - '**/config.ru'
+  Exclude:
+    - 'db/migrate/**/*'
+    - 'db/schema.rb'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+
+# non-ascii(英語以外)のコメント
+Style/AsciiComments:
+  Enabled: false
+
+# classやmoduleのトップレベルのドキュメント
+Style/Documentation:
+  Enabled: false
+
+# ブロック変数名の規約
+Style/SingleLineBlockParams:
+  Enabled: false
+
+# メソッド名の規約
+Style/PredicateName:
+  NamePrefixBlacklist:
+    - is_
+
+# 循環的複雑度
+CyclomaticComplexity:
+  Max: 21
